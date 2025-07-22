@@ -1,0 +1,51 @@
+{
+  "JIRA-101": {
+    "story_line": "As a Developer, I want to write JUnit test case for Reporting-services.",
+    "description": "Write Junits using Mockito for all the classes under Service and Controller packages of reporting-services to ensuring 100% code coverage",
+    "acceptance_criteria": [
+      "100% code coverage test cases",
+      "JUnits should be written"
+    ],
+    "story_points": 5,
+    "reference_links": [
+      "https://www.geeksforgeeks.org/software-testing/unit-testing-in-spring-boot-project-using-mockito-and-junit/"
+    ]
+  },
+  "JIRA-102": {
+    "story_line": "SAy Hello",
+    "description": "Say hello.",
+    "acceptance_criteria": [
+      
+    ],
+    "story_points": 3,
+    "reference_links": []
+  },
+  "JIRA-103": {
+    "story_line": "As a customer, I want to see my recent transactions on my dashboard.",
+    "description": "Modify dashboard to show the last 10 transactions for the logged-in user, fetching data from the new transactions API endpoint.",
+    "acceptance_criteria": [
+      "Dashboard displays a list of recent transactions.",
+      "Each transaction shows date, amount, and description.",
+      "Only show transactions belonging to the logged-in user."
+    ],
+    "story_points": 2,
+    "reference_links": [
+      "https://react-table.tanstack.com/docs/examples/basic",
+      "https://docs.spring.io/spring-data/jpa/docs/current/reference/html/"
+    ]
+  },
+"JIRA-111": {
+    "story_line": "Add validation on Input, change display name - Quick Pay.",
+    "description": "Change receiver name under 'Quick Pay' to 'receiver UPI' and add validation on Input for 'receiver name' to have an extension as '@upi'",
+    "acceptance_criteria": [
+      "Display name of receiver name under ' Quick Pay' should be rendered as 'Receiver UPI'",
+      "Throw exception as 'Invalid UPI' when an extension '@upi' is missing in Input of 'Receiver name'"
+    ],
+    "story_points": 2,
+    "reference_links": [
+      "https://react-table.tanstack.com/docs/examples/basic",
+      "https://docs.spring.io/spring-data/jpa/docs/current/reference/html/"
+    ]
+  }
+
+}

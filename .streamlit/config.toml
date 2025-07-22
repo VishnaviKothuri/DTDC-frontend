@@ -1,0 +1,21 @@
+[ui]
+hideTopBar = true
+
+[global]
+hideStreamlitMark = true
+
+[theme]
+primaryColor = "#006400"         # Dark green
+backgroundColor = "#ffffff"      # White
+secondaryBackgroundColor = "#e6f2e6"  # Very light green
+textColor = "#111111"            # Black
+font = "sans serif"
+
+[server]
+headless = true
+
+[client]
+showSidebarNavigation = false
+
+[browser]
+title = "DTDC" 
