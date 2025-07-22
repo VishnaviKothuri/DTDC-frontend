@@ -11,7 +11,7 @@
       "https://www.geeksforgeeks.org/software-testing/unit-testing-in-spring-boot-project-using-mockito-and-junit/"
     ]
   },
-  "JIRA-102": {
+  "JIRA-222": {
     "story_line": "SAy Hello",
     "description": "Say hello.",
     "acceptance_criteria": [
@@ -20,7 +20,7 @@
     "story_points": 3,
     "reference_links": []
   },
-  "JIRA-103": {
+  "JIRA-122": {
     "story_line": "As a customer, I want to see my recent transactions on my dashboard.",
     "description": "Modify dashboard to show the last 10 transactions for the logged-in user, fetching data from the new transactions API endpoint.",
     "acceptance_criteria": [
@@ -34,7 +34,7 @@
       "https://docs.spring.io/spring-data/jpa/docs/current/reference/html/"
     ]
   },
-"JIRA-111": {
+"JIRA-121": {
     "story_line": "Add validation on Input, change display name - Quick Pay.",
     "description": "Change receiver name under 'Quick Pay' to 'receiver UPI' and add validation on Input for 'receiver name' to have an extension as '@upi'",
     "acceptance_criteria": [
