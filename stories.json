@@ -35,17 +35,33 @@
     ]
   },
 "JIRA-121": {
-    "story_line": "Add validation on Input, change display name - Quick Pay.",
-    "description": "Change receiver name under 'Quick Pay' to 'receiver UPI' and add validation on Input for 'receiver name' to have an extension as '@upi'",
+    "story_line": "In the banking-ui application, modify 'Receiver username' label text to 'Receiver UPI' in 'Quick Pay' UI section ",
+    "description": "Change the label text from 'Receiver name ' to 'Receiver UPI' \n Add validation to the input field to require '@upi' extension \n Show error message 'Invalid UPI' when validation fails",
     "acceptance_criteria": [
-      "Display name of receiver name under ' Quick Pay' should be rendered as 'Receiver UPI'",
-      "Throw exception as 'Invalid UPI' when an extension '@upi' is missing in Input of 'Receiver name'"
+      "Display name of receiver name label under ' Quick Pay' UI should be rendered as 'Receiver UPI'",
+      "Input validation logic should be implemented"
     ],
-    "story_points": 2,
-    "reference_links": [
-      "https://react-table.tanstack.com/docs/examples/basic",
-      "https://docs.spring.io/spring-data/jpa/docs/current/reference/html/"
-    ]
+    "story_points": 2
+  },
+  "JIRA-125": {
+    "story_line": "Update make payment logic to deduct '0.5%' as transaction fees on all the transfers",
+    "description": "Add transaction fees calculation and deduction functionality to the payment transaction flow. When money is transferred from sender's account to receiver's account, the system should automatically deduct a flat fee of 0.5% from the transaction amount before processing the transfer.",
+    "acceptance_criteria": [
+      "Calculate 0.5% fee on the original transaction amount before transfer",
+      "Deduct the calculated fee from sender's account in addition to the transfer amount",
+      "Update transaction records to include fee amount and breakdown",
+      "Ensure fee calculation works for all transaction types (Quick Pay, transfers, etc.)"
+    ],
+    "technical_requirements": [
+      "Modify payment service to include fee calculation logic",
+      "Update transaction models to store fee information",
+      "Add fee display components in frontend forms",
+      "Implement fee validation in backend services",
+      "Update database schema to track fee transactions"
+    ],
+    "story_points": 5
   }
-
 }
+
+
+

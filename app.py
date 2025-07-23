@@ -255,7 +255,7 @@ else:
                         st.write(f"Sending: {message_to_send}")  # DEBUG: Remove after testing
                         try:
                             with st.spinner("Getting AI response..."):
-                                ai_response = chat_with_agent(message_to_send)
+                                ai_response = get_code_suggestion(message_to_send)
                             st.session_state.chat_history.append({
                                 'user': message_to_send, 
                                 'ai': ai_response
