@@ -138,6 +138,50 @@ if not st.session_state.logged_in:
             st.rerun()
 else:
     # --- User Home / Code Suggestion Workflow ---
+
+    # Sidebar for RAG Operations
+    with st.sidebar:
+        st.header("🔄 RAG Management")
+        
+        # RAG Update Options
+        st.subheader("Index Operations")
+        
+        # Radio button for operation type
+        operation_type = st.radio(
+            "Select Operation:",
+            options=["Update Index", "Full Reindex"],
+            help="Update: Incremental update | Reindex: Complete rebuild"
+        )
+        
+        # Button to trigger the operation
+        if st.button("Execute RAG Operation", type="primary"):
+            # Determine force_reindex based on selection
+            force_reindex = True if operation_type == "Full Reindex" else False
+            
+            # Call your FastAPI endpoint
+            try:
+                with st.spinner(f"Executing {operation_type.lower()}..."):
+                    response = requests.post(
+                        "http://localhost:8000/rag/update",  # Adjust URL as needed
+                        json={"force_reindex": force_reindex},
+                        headers={"Content-Type": "application/json"}
+                    )
+                    
+                    if response.status_code == 200:
+                        result = response.json()
+                        st.success(f"✅ {result['message']}")
+                        # st.info(f"Status: {result['status']}")
+                    else:
+                        st.error(f"❌ Error: {response.status_code} - {response.text}")
+                        
+            except requests.exceptions.RequestException as e:
+                st.error(f"❌ Connection error: {str(e)}")
+        
+        # Status indicator
+        st.divider()
+        st.caption("💡 **Tip:** Use 'Update Index' for regular updates, 'Full Reindex' for complete rebuilds")
+
+
     user = st.session_state.users.get(st.session_state.employee_id, {})
     full_name = f"{user.get('first_name', '')} {user.get('last_name', '')}".strip()
     col1, col2, col3 = st.columns([2, 2, 1])
@@ -189,7 +233,7 @@ else:
                 st.markdown(f"- [{ref}]({ref})")
 
         # Generate Code Suggestions - IMPROVED VERSION
-        if st.button('Generate Code Suggestions'):
+        if st.button('Generate Solution'):
             prompt = (
                 f"Jira Number: {st.session_state.jira_number}\n"
                 f"Story Line: {details.get('story_line','')}\n"
