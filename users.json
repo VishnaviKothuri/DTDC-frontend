@@ -5,5 +5,19 @@
     "email": "vishnavi@gmail.com",
     "phone": "8956231472",
     "password_hash": "$2b$12$xxUkZJ8oiJ.GIposX3a/POVa5DZxbCKS6V1jIymc8ZHMdAw1oJGzK"
+  },
+  "5053016": {
+    "first_name": "Vasantha",
+    "last_name": "Dalli",
+    "email": "vasantha@gmail.com",
+    "phone": "",
+    "password_hash": "$2b$12$W4D2bv6G96RET9AjAAeVoeC/7Al/ncGzYQq5QtCe2wXB8KrneKwpC"
+  },
+  "1013016": {
+    "first_name": "Vasantha",
+    "last_name": "D",
+    "email": "vasanthad@gmail.com",
+    "phone": "7894561232",
+    "password_hash": "$2b$12$Fc2dMscE75jD/8M04Fqjc.rre/ViyE1pIvuExOStVgNP9mUwMFFx."
   }
 }
